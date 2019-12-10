@@ -2,3 +2,6 @@ image:
   file: .gitpod.dockerfile
 ports:
   - port: 8787
+    onOpen: open-preview
+tasks:
+  - command: /usr/lib/rstudio-server/bin/rstudio-server start
