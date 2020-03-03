@@ -1,8 +1,7 @@
  #!/bin/Rscript
  
  install.packages(
-    c(      
-      'curl',
+   c( 'curl',
       'openssl',
       'git2r',
       'gh',
