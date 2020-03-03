@@ -1,4 +1,4 @@
-FROM rocker/rstudio:3.6.1 AS rstudio
+FROM rocker/rstudio:latest AS rstudio
 
 ENV PASSWORD=password
 
