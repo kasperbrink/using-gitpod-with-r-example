@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest AS rstudio
+FROM rocker/tidyverse:latest AS rstudio
 
 ENV PASSWORD=password
 
