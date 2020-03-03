@@ -2,7 +2,8 @@ FROM rocker/rstudio:3.6.1 AS rstudio
 
 ENV PASSWORD=password
 
-RUN R -e "install.packages('data.table',dependencies=TRUE, repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('odbc',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+ADD add_r_kernel.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/add_pkgs.sh && \ 
+    /usr/local/bin/add_pkgs.sh
 
 EXPOSE 8787
