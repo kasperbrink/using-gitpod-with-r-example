@@ -5,4 +5,3 @@ ports:
     onOpen: open-preview
 tasks:
   - command: /usr/lib/rstudio-server/bin/rstudio-server start
-  - command: pg_start
