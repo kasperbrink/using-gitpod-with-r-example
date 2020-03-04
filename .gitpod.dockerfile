@@ -2,6 +2,10 @@ FROM rocker/tidyverse:latest AS rstudio
 
 ENV PASSWORD=password
 
-RUN R -e "install.packages(c('curl','openssl','git2r','gh','odbc','data.table'), repos='http://cran.us.r-project.org')"
+RUN mkdir -p /utils
+
+COPY /utils/install.packages.R /utils/install.packages.R
+
+RUN Rscript /utils/install.packages.R
 
 EXPOSE 8787
